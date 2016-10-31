@@ -5,9 +5,7 @@ LASTGOMAXPROCS=$GOMAXPROCS
 export GOMAXPROCS=1
 
 echo "Running go install:"
-fgt go install github.com/Supernomad/nexus/nexusd && echo "PASS"
-
-cd nexusd/
+fgt go install github.com/Supernomad/nexus && echo "PASS"
 
 echo "Running go fmt:"
 fgt go fmt ./... && echo "PASS"
@@ -41,5 +39,3 @@ rm -f full-coverage.out
 
 echo "Reseting GOMAXPROCS to '$LASTGOMAXPROCS'"
 export GOMAXPROCS=$LASTGOMAXPROCS
-
-cd -

@@ -7,10 +7,10 @@ import (
 	"strconv"
 	"syscall"
 
-	"github.com/Supernomad/nexus/nexusd/common"
-	"github.com/Supernomad/nexus/nexusd/filter"
-	"github.com/Supernomad/nexus/nexusd/iface"
-	"github.com/Supernomad/nexus/nexusd/worker"
+	"github.com/Supernomad/nexus/common"
+	"github.com/Supernomad/nexus/filter"
+	"github.com/Supernomad/nexus/iface"
+	"github.com/Supernomad/nexus/worker"
 )
 
 func main() {

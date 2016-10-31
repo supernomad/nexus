@@ -1,7 +1,7 @@
 package iface
 
 import (
-	"github.com/Supernomad/nexus/nexusd/common"
+	"github.com/Supernomad/nexus/common"
 )
 
 const (

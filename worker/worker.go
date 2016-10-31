@@ -1,9 +1,9 @@
 package worker
 
 import (
-	"github.com/Supernomad/nexus/nexusd/common"
-	"github.com/Supernomad/nexus/nexusd/filter"
-	"github.com/Supernomad/nexus/nexusd/iface"
+	"github.com/Supernomad/nexus/common"
+	"github.com/Supernomad/nexus/filter"
+	"github.com/Supernomad/nexus/iface"
 )
 
 // Worker object to handle recieving, filtering and sending packets

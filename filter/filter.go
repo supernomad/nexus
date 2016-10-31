@@ -1,7 +1,7 @@
 package filter
 
 import (
-	"github.com/Supernomad/nexus/nexusd/common"
+	"github.com/Supernomad/nexus/common"
 )
 
 // Filter interface to use for creating generic filters
