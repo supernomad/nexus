@@ -17,6 +17,7 @@ import (
 	"gopkg.in/yaml.v2"
 )
 
+// Config object for base level options
 type Config struct {
 	ConfigFile string
 	PidFile    string
@@ -166,6 +167,7 @@ func (cfg *Config) parseComputedArguments() error {
 	return nil
 }
 
+// NewConfig object
 func NewConfig(log *Logger) (*Config, error) {
 	cfg := &Config{notSet: make(map[string]bool)}
 

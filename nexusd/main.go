@@ -20,7 +20,7 @@ func main() {
 		log.Error.Fatalln("[MAIN]", "Configuration issue encountered:", err)
 	}
 
-	backend := iface.New(iface.UdpSocket, log, cfg)
+	backend := iface.New(iface.UDPSocket, log, cfg)
 	err = backend.Open()
 	if err != nil {
 		log.Error.Fatalln("[MAIN]", "Error bringing up the backend networking interface:", err)

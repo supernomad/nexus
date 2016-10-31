@@ -4,6 +4,7 @@ import (
 	"syscall"
 )
 
+// Packet object to represent a packet traversing the system
 type Packet struct {
 	Data               []byte
 	Length             int
@@ -11,6 +12,7 @@ type Packet struct {
 	SourceAddress      syscall.Sockaddr
 }
 
+// NewPacket object
 func NewPacket(buf []byte, src syscall.Sockaddr, size int) *Packet {
 	return &Packet{
 		Data:               buf,

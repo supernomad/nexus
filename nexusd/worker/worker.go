@@ -6,6 +6,7 @@ import (
 	"github.com/Supernomad/nexus/nexusd/iface"
 )
 
+// Worker object to handle recieving, filtering and sending packets
 type Worker struct {
 	filters []filter.Filter
 	backend iface.Iface
@@ -29,6 +30,7 @@ func (worker *Worker) pipeline(queue int) error {
 	return worker.backend.Write(queue, packet)
 }
 
+// Start the worker object
 func (worker *Worker) Start(queue int) {
 	go func() {
 		for !worker.done {
@@ -39,10 +41,12 @@ func (worker *Worker) Start(queue int) {
 	}()
 }
 
+// Stop the worker object gracefully
 func (worker *Worker) Stop() {
 	worker.done = true
 }
 
+// New work object
 func New(log *common.Logger, cfg *common.Config, backend iface.Iface, filters []filter.Filter) *Worker {
 	return &Worker{
 		filters: filters,

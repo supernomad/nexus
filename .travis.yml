@@ -1,0 +1,11 @@
+language: go
+
+go:
+  - tip
+  - 1.6
+
+before_install:
+  - dist/build_deps.sh
+
+script:
+  - dist/build.sh ci

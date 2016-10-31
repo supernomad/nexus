@@ -5,8 +5,8 @@ import (
 )
 
 const (
-	// UdpSocket iface
-	UdpSocket int = 0
+	// UDPSocket iface
+	UDPSocket int = 0
 	// AFPacket iface
 	AFPacket int = 1
 	// NetMap iface
@@ -25,7 +25,7 @@ type Iface interface {
 // New Iface object
 func New(kind int, log *common.Logger, cfg *common.Config) Iface {
 	switch kind {
-	case UdpSocket:
+	case UDPSocket:
 		return newSocket(log, cfg)
 		/*
 			case AFPacket:
